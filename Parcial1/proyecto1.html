@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossy Road</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #00aaff;
+        }
+
+        #game-container {
+            width: 400px;
+            height: 600px;
+            background-color: #5d8730;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .character {
+            width: 40px;
+            height: 40px;
+            background-color: #ff6b6b;
+            position: absolute;
+            bottom: 0;
+            left: 180px;
+            transition: left 0.2s, bottom 0.2s;
+        }
+
+        .car {
+            width: 60px;
+            height: 40px;
+            background-color: #333;
+            position: absolute;
+            bottom: 0;
+            animation: moveCar 2s linear infinite;
+        }
+
+        @keyframes moveCar {
+            to {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<button id="boton"></button>
+<body>
+    <div id="game-container">
+        <div class="character"></div>
+        <!-- Agrega más elementos de carretera y obstáculos aquí -->
+    </div>
+    <script>
+        $("#boton").click(function(){
+            startGame();
+        });
+        const gameContainer = document.getElementById("game-container");
+        const character = document.querySelector(".character");
+        let characterBottom = 0;
+        let characterLeft = 180;
+        let gameInterval;
+        let isMoving = false;
+
+        function startGame() {
+            gameInterval = setInterval(moveCars, 2000); // Crea coches cada 2 segundos
+            document.addEventListener("keydown", moveCharacter);
+        }
+
+        function moveCharacter(event) {
+            if (!isMoving) {
+                isMoving = true;
+                if (event.key === "ArrowLeft" && characterLeft > 0) {
+                    characterLeft -= 40;
+                } else if (event.key === "ArrowRight" && characterLeft < 360) {
+                    characterLeft += 40;
+                } else if (event.key === "ArrowUp" && characterBottom < 560) {
+                    characterBottom += 40;
+                }
+                character.style.left = characterLeft + "px";
+                character.style.bottom = characterBottom + "px";
+                setTimeout(() => {
+                    isMoving = false;
+                }, 200);
+            }
+        }
+
+        function moveCars() {
+            const car = document.createElement("div");
+            car.className = "car";
+            const randomLane = Math.floor(Math.random() * 15) * 40; // Posición aleatoria en carriles diferentes
+            car.style.left = randomLane + "px";
+            gameContainer.appendChild(car);
+
+            const cars = document.querySelectorAll(".car");
+            cars.forEach(car => {
+                car.style.bottom = (parseInt(car.style.bottom) + 40) + "px";
+                if (parseInt(car.style.bottom) > 600) {
+                    car.remove();
+                }
+                checkCollision(character, car);
+            });
+        }
+
+        function checkCollision(character, car) {
+            const characterRect = character.getBoundingClientRect();
+            const carRect = car.getBoundingClientRect();
+
+            if (
+                characterRect.left < carRect.right &&
+                characterRect.right > carRect.left &&
+                characterRect.top < carRect.bottom &&
+                characterRect.bottom > carRect.top
+            ) {
+                clearInterval(gameInterval);
+                alert("¡Perdiste!");
+                location.reload(); // Recargar la página para reiniciar el juego
+            }
+        }
+
+        startGame();
+    </script>
+</body>
+</html>

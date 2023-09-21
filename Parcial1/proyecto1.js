@@ -22,9 +22,10 @@ $(document).ready(function () {
     $("#mequedo1").on("click", function () {
         quedo1 = true;
         $("#boton1").attr("disabled", true);
-        $("#mequedo1").attr("disabled", true); 
+        $("#mequedo1").attr("disabled", true);
         $("#total1").html("<h1>Total Jugador 1: " + total1 + "</h1>");
         $("#numero1").hide();
+        Ganador();
     });
 
     $("#boton2").on("click", function () {
@@ -42,8 +43,23 @@ $(document).ready(function () {
     $("#mequedo2").on("click", function () {
         quedo2 = true;
         $("#boton2").attr("disabled", true);
-        $("#mequedo2").attr("disabled", true); 
+        $("#mequedo2").attr("disabled", true);
         $("#total2").html("<h1>Total Jugador 2: " + total2 + "</h1>");
         $("#numero2").hide();
+        Ganador();
     });
+
+    function Ganador() {
+        if (quedo1 && quedo2) {
+            var puntaje1 = Math.abs(21 - total1);
+            var puntaje2 = Math.abs(21 - total2);
+            
+            if (puntaje1 < puntaje2) {
+                alert("Jugador 1 gana.");
+            } else if (puntaje2 < puntaje1) {
+                alert("Jugador 2 gana.");
+            
+        }
+    }
+    }
 });

@@ -24,6 +24,7 @@ $(document).ready(function () {
         $("#boton1").attr("disabled", true);
         $("#mequedo1").attr("disabled", true); 
         $("#total1").html("<h1>Total Jugador 1: " + total1 + "</h1>");
+        $("#numero1").hide();
     });
 
     $("#boton2").on("click", function () {
@@ -43,6 +44,6 @@ $(document).ready(function () {
         $("#boton2").attr("disabled", true);
         $("#mequedo2").attr("disabled", true); 
         $("#total2").html("<h1>Total Jugador 2: " + total2 + "</h1>");
-        $("numero2").attr("disabled", true);
+        $("#numero2").hide();
     });
 });

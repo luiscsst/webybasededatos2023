@@ -8,15 +8,24 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="proyecto1.js"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>Juego</h1><hr>
+<body background="imagenesproyecto/fondo.jpg" id="body" alt="body">
+<style>
+    body{
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+ 
+</style>
+
+    <div class="container positio">
+        <h1>Juego</h1><br>
         <div class="row">
-            <div class="col-sm-4">
-                <button class="btn btn-primary " id="boton1">Pedir carta Jugador 1</button>
+            <div  class="col-sm-4 text-center">
+                <button class="btn btn-success mt-3" id="boton1">Pedir carta Jugador 1</button>
             </div>
-            <div class="col-sm-4">
-                <img src="imagenesproyecto/carta1.PNG" alt="dado" id="dado1" class="img-fluid">
+            <div class="col-sm-4 text-center">
+                <img src="imagenesproyecto/carta1.PNG"  alt="dado" id="dado1" class="img-fluid">
             </div>
             <div class="col-sm-4">
                 <h2 id="numero1">0</h2>
@@ -24,12 +33,15 @@
                 <button class="btn btn-primary mt-2" id="mequedo1" >Me quedo Jugador 1</button>
             </div>
         </div>
+        <br><br><br><br><br><br>
         
+
+    <div class="container" >
         <div class="row">
-            <div class="col-sm-4">
-                <button class="btn btn-primary mt-3" id="boton2">Pedir carta Jugador 2</button>
+            <div class="col-sm-4 text-center" >
+                <button class="btn btn-success mt-3" id="boton2">Pedir carta Jugador 2</button>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 text-center">
                 <img src="imagenesproyecto/carta1.PNG" alt="dado" id="dado2" class="img-fluid">
             </div>
             <div class="col-sm-4">
@@ -38,6 +50,7 @@
                 <button class="btn btn-primary mt-2" id="mequedo2">Me quedo Jugador 2</button>
             </div>
         </div>
+    </div>
     </div>
 </body>
 </html>

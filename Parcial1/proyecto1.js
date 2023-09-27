@@ -7,6 +7,7 @@ $(document).ready(function () {
     var total2 = 0;
     var quedo2 = false;
 
+
     $("#boton1").on("click", function () {
         if (!quedo1) {
             valor_dado1 = Math.floor(Math.random() * 10 + 1);
@@ -17,6 +18,7 @@ $(document).ready(function () {
             total1 += valor_dado1;
             $("#total1").html("Acumuladas: " + total1);
         }
+        if(!total1 == )
     });
 
     $("#mequedo1").on("click", function () {

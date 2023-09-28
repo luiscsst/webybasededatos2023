@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+</head>
+<style>
+    body {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+background-position: center center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#resultado {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+</style>
+<body background="imagenesproyecto/fondo2.jpg" id="body" alt="body">
+    
+    <div id="resultado"></div>
+    <button id="volverAJugar">Volver a jugar</button>
+    
+    <script>
+        
+        document.getElementById("volverAJugar").addEventListener("click", function () {
+            
+            window.location.href = "inicio.html";
+        });
+    </script>
+</body>
+</html>

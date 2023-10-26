@@ -13,8 +13,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Bienvenido al sistema de gestión de alumnos</h2>
-                <img src="imagenes/foto1.png" alt="">
+                <h2>Bienvenido al sistema</h2>
+                <img src="imagenes/cetis.png" alt="" width="200px">
             </div>
         </div>
     </div>

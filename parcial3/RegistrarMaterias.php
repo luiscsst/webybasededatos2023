@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registar materias</title>
+    <title>Registar materias</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <?php include 'menu.php';           ?>
-
+     
     <div class="container">
         <div class="row">
             <div class="col-12 card p-4"></div>
-            <form action="">
+            <form action="guardarMateria.php" method="POST">
                 <div class="from-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" name="nombre" placeholder="teclea la materia">
@@ -25,8 +25,8 @@
                 </div><br>
 
                 <div class="form-group">
-                    <select name="semestre" class="form-control">
-                        <option value="">selecciona una especialidad</option>
+                    <select name="especialidad" class="form-control">
+                        <option value="">Selecciona una especialidad</option>
                         <option value="PROGRAMACION">PROGRAMACION</option>
                         <option value="CONTABILIDAD">CONTABILIDAD</option>
                         <option value="OFIMATICA">OFIMATICA</option>
@@ -36,7 +36,7 @@
                 </div>
                 <div>
                     <input type="submit" class="btn btn-primary" value="Registrar">
-                    <a href="ConsultarMaterias.php" class="btn btn-danger">cancelar</a>
+                    <a href="ConsultarMaterias.php" class="btn btn-danger">Cancelar</a>
                 </div><br>
         
             </form>

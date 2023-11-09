@@ -1,4 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #1F618D;">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a7201f;">
+
+
 
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Cetis</a>
@@ -18,10 +22,10 @@
             Menu
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="inicioo.php">inicio</a></li>
-            <li><a class="dropdown-item" href="consultarAlumnos.php">consultar alumnos</a></li>
+            <li><a class="dropdown-item" href="consultarAlumnos.php">Consultar alumnos</a></li>
+            <li><a class="dropdown-item" href="inicio.php">Inicio</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="RegistrarAlumnos.php">Registrar Alumnos</a></li>
+            <li><a class="dropdown-item" href="RegistrarAlumnos.php">Registrar alumno</a></li>
           </ul>
         </li>
         <li class="nav-item">

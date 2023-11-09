@@ -36,7 +36,7 @@
                 </div>
                 <div>
                     <input type="submit" class="btn btn-primary" value="Registrar">
-                    <a href="ConsultarMaterias.php" class="btn btn-danger">Cancelar</a>
+                    <a href="consultarMaterias.php" class="btn btn-danger">Cancelar</a>
                 </div><br>
         
             </form>

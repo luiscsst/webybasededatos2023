@@ -13,9 +13,7 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Opciones
@@ -38,9 +36,7 @@
             <li><a class="dropdown-item" href="RegistrarMaterias.php">Registrar Materias</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Desabilitar</a>
-        </li>
+        
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
